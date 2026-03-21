@@ -107,14 +107,15 @@
 }
 
 .rebates-banner {
-  background-image: url("images/hero-refrigerator.jpg");
+  background-image: url("images/rebate-background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  object-fit: cover;
   border-radius: 18px;
   overflow: hidden;
   position: relative;
-  min-height: 360px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +128,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -246,6 +247,7 @@
 .hero-carousel__btn--prev {
   left: 12px;
 }
+
 .hero-carousel__btn--next {
   right: 12px;
 }
@@ -380,10 +382,7 @@
 }
 
 .product-card {
-  flex: 0 0
-    calc(
-      (100% - (16px * (var(--visible-count, 5) - 1))) / var(--visible-count, 5)
-    );
+  flex: 0 0 calc((100% - (16px * (var(--visible-count, 5) - 1))) / var(--visible-count, 5));
   border: 1px solid #eef0f4;
   border-radius: 14px;
   padding: 12px;
@@ -428,9 +427,11 @@
 .about-us__img {
   width: 100%;
   height: 100%;
+  min-height: 500px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
+  padding: 2rem;
 }
 
 .about-us:hover .about-us__img {
